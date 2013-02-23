@@ -42,7 +42,7 @@ def stripExtension (file):
 
 def compileDocuments (documentsToCompile):
     for document in documentsToCompile:
-        file = open (os.path.join ('_posts', document + '.md'), 'w')
+        file = open (os.path.join ('_posts', '2011-12-12-' + document.replace(' ', '-') + '.md'), 'w')
         print >> file, '---'
         print >> file, 'layout: default'
         print >> file, 'title: %s' % document
