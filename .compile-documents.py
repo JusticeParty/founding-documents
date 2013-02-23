@@ -44,7 +44,7 @@ def compileDocuments (documentsToCompile):
     for document in documentsToCompile:
         file = open (os.path.join ('_posts', document + '.md'), 'w')
         print >> file, '---'
-        print >> file, 'layout: post'
+        print >> file, 'layout: default'
         print >> file, 'title: %s' % document
         print >> file, '---'
         
