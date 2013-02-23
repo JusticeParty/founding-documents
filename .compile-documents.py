@@ -46,12 +46,12 @@ def compileDocuments (documentsToCompile):
         file = open (os.path.join ('_posts', '2011-12-12-' + document.replace(' ', '-') + '.md'), 'w')
         print >> file, '---'
         print >> file, 'layout: default'
-        print >> file, 'title: %s' % document
+        print >> file, 'title: %s' % document.decode ('UTF-8', 'ignore')
         print >> file, '---'
         
         print >> file, '{{ page.title }}'
         print >> file, '================'
         
-        print >> file, compileInOrder (document, [])
+        print >> file, compileInOrder (document, []).decode ('UTF-8', 'ignore')
 
 compileDocuments (['Bylaws', 'Values'])
