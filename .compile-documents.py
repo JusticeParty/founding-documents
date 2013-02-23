@@ -55,9 +55,3 @@ def compileDocuments (documentsToCompile):
         print >> file, compileInOrder (document, [])
 
 compileDocuments (['Bylaws', 'Values'])
-call (['git', 'checkout gh-pages'])
-call (['git', 'checkout master -- _posts'])
-call (['git', 'commit -a -m "updating compiled documents"'])
-call (['git', 'checkout master'])
-call (['git', 'commit -a -m "updating compiled documents"'])
-call (['git', 'push'])
